@@ -1,4 +1,7 @@
+*{
+  box-sizing: border-box;
 
+}
 body{
     background-color: rgb(253, 246, 248);
     color: rgb(0, 0, 0);
@@ -74,10 +77,11 @@ margin-left: 200px; }
     margin-top: 30px;
     background-color: rgb(215, 87, 130);
     color: aliceblue;
- /* margin-left: px; */
- border-radius: 10%;
+ border-radius: 10px;
 
  }
+ .list2 a{color: white;
+text-decoration: none;}
  .log{
   margin-top: 18px;
   margin-left: 60px;
@@ -89,7 +93,7 @@ margin-left: 200px; }
     background-color: rgb(65, 8, 27) ;
     color: aliceblue;
     border: 7px solid rgb(242, 242, 242);
-  
+  transition:  ease-in-out;
  }
  .list3{
     width: 90px;
@@ -97,7 +101,7 @@ margin-left: 200px; }
     margin-top: 30px;
     background-color: rgb(215, 87, 130);
     color: aliceblue;
-    /* margin-left: 80px; */
+   border-radius: 10px;
   
  }
  .list3:hover{
@@ -116,18 +120,19 @@ border: 7px solid rgb(242, 242, 242);
     animation-iteration-count: infinite;
     animation-play-state: running;
     display: inline-flex;
+   
   
 }
  @keyframes box{
-0%{left: 25%;}
-25%{left: 50%;}
+0%{left: 20%;}
+25%{left: 40%;}
 /* 50%{left: 100%;} */
 /* 75%{left: 100%;} */
 } 
  #HOME{
     display: flex;
     flex-direction: column;
-    background-image: url(/back1.jpg);
+    background-image: url(./img/back1.jpg);
     text-align: center;
     height: 400px;
 
@@ -296,6 +301,7 @@ height:430px;
    #box5 h2{color: rgb(248, 248, 0);}
    #box6 h2{color: rgb(248, 248, 0);}
    #box7 h2{color: rgb(248, 248, 0);}
+   
 #box4{
     text-align: center;
     justify-content: center;
@@ -307,23 +313,24 @@ height:430px;
   margin-top: 10px;
   margin-left: 40px;
   box-shadow: 2px 2px 10px  rgb(108, 0, 38);
-
+  background-color:  rgb(178, 38, 87)
 
 } 
 #box4:hover{
     text-align: center;
     justify-content: center;
-   background-color:  rgb(178, 38, 87);
-    border-radius: 20px;
+  border-radius: 20px;
   height:400px;
   width:320px ;
-  margin-right: 40px;
-color: aliceblue;
-  margin-left: 40px;
+   margin-right: 40px;
+ margin-left: 40px;
   box-shadow: 2px 2px 10px  rgb(108, 0, 38);
   margin-top: 30px;
   transition: ease-in;
-
+  background-color: rgb(255, 241, 246);
+h2{
+  color: black;
+}
 } 
 #box4 img{
    margin-top: 40px;
@@ -344,13 +351,12 @@ color: aliceblue;
   margin-left: 40px;
   position: relative;
   box-shadow: 2px 2px 10px  rgb(108, 0, 38);
- 
+  background-color:  rgb(178, 38, 87)
 } 
 #box5:hover{
     text-align: center;
     justify-content: center;
-   background-color:   rgb(178, 38, 87);
-    border-radius: 20px;
+ border-radius: 20px;
     color: aliceblue;
   height:400px;
   width:320px ;
@@ -360,7 +366,10 @@ color: aliceblue;
   position: relative;
   box-shadow: 2px 2px 10px  rgb(108, 0, 38);
   transition: ease-in;
- 
+background-color: rgb(255, 241, 246);
+h2{
+  color: black;
+}
 } 
 #box5 img{
     margin-top: 30px;
@@ -380,14 +389,18 @@ color: aliceblue;
   margin-top: 10px;
   margin-left: 40px;
   box-shadow: 2px 2px 10px  rgb(108, 0, 38);
-
+  background-color:  rgb(178, 38, 87)
 
 
 } 
 #box6:hover{
     text-align: center;
     justify-content: center;
-    background-color:  rgb(178, 38, 87);
+    transition: ease-in;
+    background-color: rgb(255, 241, 246);
+  h2{
+    color: black;
+  }
     color: aliceblue;
     border-radius: 20px;
   height:400px;
@@ -417,8 +430,8 @@ color: aliceblue;
   margin-right: 40px;
   margin-top: 10px;
   margin-left: 40px;
-  box-shadow: 2px 2px 10px  rgb(108, 0, 38)
-
+  box-shadow: 2px 2px 10px  rgb(108, 0, 38);
+  background-color:  rgb(178, 38, 87);
 } 
 #box7 img{
     margin-top: 30px;
@@ -430,7 +443,6 @@ color: aliceblue;
 #box7:hover{
   text-align: center;
   justify-content: center;
-  background-color:  rgb(178, 38, 87);
   color: aliceblue;
   border-radius: 20px;
 height:400px;
@@ -438,42 +450,57 @@ width:320px ;
 margin-right: 40px;
 margin-top: 30px;
 margin-left: 40px;
-box-shadow: 2px 2px 10px  rgb(108, 0, 38)
-
+box-shadow: 2px 2px 10px  rgb(108, 0, 38);
+transition: ease-in;
+background-color: rgb(255, 241, 246);
+h2{
+color: black;
+}
 
 } 
-.info1{background-color: palevioletred;
-color: aliceblue;
+.footer{background-color: palevioletred;
+color: rgb(255, 255, 255);
 font-size: 25px;
-/* display: flex; */
 height: 300px;
-width: 100vw;
+width: 100%;
 display: inline-flex;
 }
+.footer_left{
+ width: 40%;
+ margin-left: 30px; 
+}
+.footer_left img{
+margin:  10px 0 0 50px; 
+}
+.footer p{
+  font-size: 1rem;
+
+
+}
 .btn1{
-     /* width: 100vw;  */
+  width: 100%;
     background-color: rgb(182, 133, 149);
 }
-#id{margin-left: 40px;}
+
 .item ul {
     list-style: none;
     text-decoration: none;
 }
 .item ul li a{
    text-decoration: none;
- color: rgba(255, 255, 255, 0.718);
+ color: rgba(251, 249, 249, 0.87);
  font-size: 20px;
  }
  .class{
 height: 300px;
 width: 200px; 
  width: 200px;
-margin: 10px 30px;
+margin: 10px;
 }
  .item{
 height: 300px;
   width: 200px;
-margin: 10px 30px;}
+margin: 10px ;}
 .class ul {
     list-style: none;
     text-decoration: none;

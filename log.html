@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bruno+Ace&family=Cardo&family=Concert+One&family=Cormorant+Garamond:wght@300;500;600;700&family=Dosis:wght@300;500;700&family=Josefin+Sans&family=Knewave&family=Poppins:wght@100;300;800&family=Quicksand:wght@500&family=Tangerine&display=swap" rel="stylesheet">
+    <title>Login/Signup Page</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        font-family: 'dosis';
+      }
+      :root {
+        --primary-color:  rgb(108, 0, 38);
+        --secondary-color: palevioletred;
+      }
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        background-image: linear-gradient(rgb(255, 235, 238),rgb(216, 233, 255));
+      
+      
+        background-size: cover;
+      }
+      .login_cointainer {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 44rem;
+        box-shadow: 4px 4px 15px var(--secondary-color);
+        background-image: linear-gradient(pink,rgb(142, 189, 250));
+        border-radius: 1rem;
+        height: 30rem;
+       
+      }
+      .loginimg {
+        width: 22rem;
+      }
+      .loginimg img {
+        width: 22rem;
+      }
+      .login_cointainer form {
+        display: flex;
+        flex-direction: column;
+        padding: 1.5rem;
+        border: none;
+        width: 22rem;
+      }
+
+      input {
+        padding: 0.8rem;
+        margin: 0.5rem 0;
+        border-radius: 0.8rem;
+        border: 1px solid #ccc;
+      }
+
+      button {
+        padding: 0.8rem;
+        margin: 0.5rem 0 0 0;
+        border-radius: 0.8rem;
+        border: none;
+        background-color: var(--secondary-color);
+        color: white;
+        cursor: pointer;
+        font-size: 1.2rem;
+      }
+      .login_para span {
+        cursor: pointer;
+        color: var(--primary-color);
+      }
+      .login_para {
+        font-size: 1rem;
+      }
+      .center {
+        text-align: center;
+      }
+      .primary_heading {
+        font-size: 3.2rem;
+        color: var(--primary-color);
+        margin: 1rem;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="login_cointainer">
+      <div class="loginimg"><img src="./img/login_background.png" alt="" /></div>
+      <div id="loginForm">
+        <form class="center">
+          <h2 class="primary_heading">Login</h2>
+          <input type="text" placeholder="Username" id="username" required />
+          <input
+            type="password"
+            placeholder="Password"
+            id="password"
+            required
+          />
+          <button type="submit">Login</button>
+          <p class="login_para">
+            Don't have a account? <span id="toggleLogin"> Register here </span>
+          </p>
+        </form>
+      </div>
+
+      <div id="signinForm">
+        <form class="center">
+          <h2 class="primary_heading">Sign in</h2>
+          <input type="text" placeholder="Name" id="userName" required />
+          <input
+            type="tel"
+            placeholder="Number"
+            pattern="[0-9]{10}"
+            id="userNumber"
+            required
+          />
+          <input type="email" placeholder="Email" id="userEmail" required />
+          <input
+            type="password"
+            placeholder="Password"
+            id="emailPassword"
+            required
+          />
+          <button type="submit">Sign in</button>
+          <p class="login_para">
+            Already have an account? <span id="toggleSignin">Login</span>
+          </p>
+        </form>
+      </div>
+    </div>
+
+    <script>
+      document.getElementById("loginForm").style.display = "block";
+      document.getElementById("signinForm").style.display = "none";
+
+      function toggleSignin() {
+        document.getElementById("loginForm").style.display = "block";
+        document.getElementById("signinForm").style.display = "none";
+      }
+      function toggleLogin() {
+        document.getElementById("loginForm").style.display = "none";
+        document.getElementById("signinForm").style.display = "block";
+      }
+      document
+        .getElementById("toggleSignin")
+        .addEventListener("click", toggleSignin);
+      document
+        .getElementById("toggleLogin")
+        .addEventListener("click", toggleLogin);
+    </script>
+  </body>
+</html>
